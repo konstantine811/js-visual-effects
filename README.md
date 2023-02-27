@@ -23,6 +23,24 @@ function onDraw() {
   ctx.fillStyle = "blue";
   // and create rect with x, y, width, and height parameters
   ctx.fillRect(100, 100, 400, 400);
+
+  // beginPath - method of the 2d Canvas API starts a new path by emptying the list of sub-paths. Call this method when you want to create a new path.
+  ctx.beginPath();
+  ctx.lineWidth = 4;
+  ctx.rect(100, 100, 400, 400);
+  // draw stroke rect
+  ctx.stroke();
+
+  // draw circle
+  ctx.beginPath();
+  // first paramster is x center
+  // second paramster is y center
+  // third is radius
+  // fourth is start angle drawing
+  // second is end angle drawing in radian
+  ctx.arc(300, 300, 100, 0, Math.PI * 2);
+  ctx.strokeStyle = "white";
+  ctx.stroke();
 }
 
 function listenResize() {
